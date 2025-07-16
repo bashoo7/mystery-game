@@ -34,3 +34,26 @@ button {
 button:hover {
   background-color: #3a78b0;
 }
+
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: pink;
+  border-radius: 50%;
+  animation: fall linear infinite;
+  z-index: 999;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+
