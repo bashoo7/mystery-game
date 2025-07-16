@@ -6,26 +6,24 @@
   padding: 0;
 }
 
-.title {
-  font-size: 1.4rem;
-}
-
-.description {
-  font-size: 1rem;
-}
-
-input[type="text"] {
-  font-size: 1rem;
-  padding: 0.5rem;
-}
-
 html, body {
   height: 100%;
   font-family: 'Cinzel', serif;
   background: linear-gradient(to bottom, #d3e4f0, #ffffff);
+  transition: opacity 1s ease;
 }
 
-/* メインレイアウト */
+/* フェードイン */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* レイアウト */
 .container {
   display: flex;
   flex-direction: column;
@@ -36,27 +34,18 @@ html, body {
   padding: 1rem;
 }
 
-/* ボックス自体を画面いっぱいめに調整 */
 .card {
   background-color: #fff;
   padding: 24px;
   border-radius: 16px;
   width: 100%;
-  max-width: 800px;
+  max-width: 480px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   text-align: center;
   margin: 0 auto;
 }
 
-.fade-in {
-  animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
+/* 見出し・本文 */
 h1, h2 {
   font-size: 1.8em;
   margin-bottom: 16px;
@@ -68,6 +57,7 @@ p {
   margin-bottom: 16px;
 }
 
+/* 入力欄とボタン */
 input[type="text"] {
   padding: 12px;
   font-size: 1em;
@@ -98,8 +88,8 @@ button:hover {
   color: #cc0000;
 }
 
-/* スマホ向け最適化 */
-@media screen and (max-width: 480px) {
+/* ==== スマホ向け最適化 ==== */
+@media screen and (max-width: 600px) {
   h1, h2 {
     font-size: 1.5em;
   }
@@ -116,5 +106,40 @@ button:hover {
 
   .card {
     padding: 20px;
+  }
+}
+
+/* ==== 改行制御用クラス ==== */
+.br-sm {
+  display: none;
+}
+
+.mobile-break {
+  display: none;
+}
+
+.only-sm {
+  display: none;
+}
+.only-pc {
+  display: block;
+}
+
+/* スマホ時に表示切り替え */
+@media screen and (max-width: 600px) {
+  .br-sm {
+    display: inline;
+  }
+
+  .mobile-break {
+    display: block;
+  }
+
+  .only-sm {
+    display: block;
+  }
+
+  .only-pc {
+    display: none;
   }
 }
