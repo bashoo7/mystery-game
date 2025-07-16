@@ -31,6 +31,12 @@ html, body {
   padding: 1rem;
 }
 
+.image-title {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto; /* 上0、左右autoで中央寄せ、下に余白 */
+}
 .card {
   background-color: #fff;
   padding: 2rem;
