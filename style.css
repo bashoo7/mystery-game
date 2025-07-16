@@ -1,62 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
 * {
   box-sizing: border-box;
-}
-
-body {
-  font-family: 'Libre Baskerville', serif;
-  background: linear-gradient(to bottom, #d3e4f0, #ffffff);
   margin: 0;
   padding: 0;
-  height: 100vh;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Cinzel', serif;
+  background: linear-gradient(to bottom, #d3e4f0, #ffffff);
+}
+
+/* メインレイアウト */
+.container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: fadeIn 1s ease-in forwards;
-  opacity: 0;
+  min-height: 100vh;
+  padding: 24px;
 }
 
-.fade-in {
-  animation: fadeIn 1s ease-in forwards;
-  opacity: 0;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-.fade-out {
-  animation: fadeOut 0.6s ease-out forwards;
-}
-
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-  }
-}
-
-.container {
+/* ボックス自体を画面いっぱいめに調整 */
+.card {
   background-color: #fff;
-  padding: 32px;
+  padding: 24px;
   border-radius: 16px;
-  width: 90%;
-  max-width: 500px;
+  width: 100%;
+  max-width: 600px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   text-align: center;
 }
 
 h1, h2 {
-  font-size: 1.6em;
+  font-size: 1.8em;
   margin-bottom: 16px;
 }
 
 p {
-  font-size: 1.1em;
+  font-size: 1.2em;
   line-height: 1.6;
-  margin: 12px 0;
+  margin-bottom: 16px;
 }
 
 input[type="text"] {
@@ -64,8 +49,8 @@ input[type="text"] {
   font-size: 1em;
   border: 1px solid #ccc;
   border-radius: 8px;
-  width: 60%;
-  margin-top: 12px;
+  width: 70%;
+  max-width: 300px;
 }
 
 button {
@@ -89,19 +74,23 @@ button:hover {
   color: #cc0000;
 }
 
-/* スマホ向け微調整 */
+/* スマホ向け最適化 */
 @media screen and (max-width: 480px) {
   h1, h2 {
-    font-size: 1.4em;
+    font-size: 1.5em;
   }
 
-  input[type="text"] {
-    width: 100%;
-    margin-bottom: 12px;
+  p {
+    font-size: 1.1em;
   }
 
-  button {
+  input[type="text"], button {
     width: 100%;
+    margin-top: 8px;
     margin-left: 0;
+  }
+
+  .card {
+    padding: 20px;
   }
 }
