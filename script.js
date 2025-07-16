@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   submitBtn.addEventListener("click", function () {
     const input = document.getElementById("answer").value;
     if (input === correct) {
-      window.location.href = "next.html";
+      window.location.href = "question2.html";
     } else {
       message.textContent = "ちがうよ！もう一度考えてみよう。";
     }
