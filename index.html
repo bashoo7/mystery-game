@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ja">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>HTML、CSS、Javascriptのサンプル</title>
-    <link rel="stylesheet" href="test2.css">
-    <script type="text/javascript" src="test3.js"></script>
+  <meta charset="UTF-8">
+  <title>ヴァナ・トーマスの謎</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
-    <section class="wrapper">
-        <div class="container">
-            <div class="content">
-                <h2 class="heading">MESSAGE</h2>
-                <p>テキストテキストテキストテキストテキストテキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                <form><input type="button" value="日時表示" onClick="message()"></form>
-                <span id="view_time"></span>
-            </div>
-        </div>
-    </section>
+  <div class="container">
+    <h2>第1の謎：トーマスの見ている風景</h2>
+    <p>旧市庁舎のてっぺんに立つおじさん「ヴァナ・トーマス」は、ある方向を見つめている…<br>
+    その先にあるものをヒントに、暗証番号（3ケタ）を入力せよ。</p>
+
+    <input type="text" id="answer" placeholder="例:123">
+    <button id="submitBtn">送信</button>
+    <p id="message"></p>
+  </div>
 </body>
+</html>
