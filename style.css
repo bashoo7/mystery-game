@@ -23,6 +23,13 @@ html, body {
   to { opacity: 1; }
 }
 
+.big {
+  font-size: 1.5em; /* 通常の1.5倍 */
+  font-weight: bold;
+  display: inline-block;
+  margin: 0.2em 0;
+}
+
 .container {
   display: flex;
   justify-content: center;
