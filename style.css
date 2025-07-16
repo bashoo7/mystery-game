@@ -19,7 +19,7 @@ html, body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 24px;
+  padding: 0;
 }
 
 /* ボックス自体を画面いっぱいめに調整 */
@@ -28,7 +28,7 @@ html, body {
   padding: 24px;
   border-radius: 16px;
   width: 100%;
-  max-width: 600px;
+  max-width: none;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   text-align: center;
 }
