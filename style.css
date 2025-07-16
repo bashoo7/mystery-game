@@ -6,6 +6,19 @@
   padding: 0;
 }
 
+.title {
+  font-size: 1.4rem;
+}
+
+.description {
+  font-size: 1rem;
+}
+
+input[type="text"] {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
 html, body {
   height: 100%;
   font-family: 'Cinzel', serif;
@@ -19,7 +32,8 @@ html, body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 0;
+  width: 90%;
+  padding: 1rem;
 }
 
 /* ボックス自体を画面いっぱいめに調整 */
@@ -31,6 +45,15 @@ html, body {
   max-width: none;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   text-align: center;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 h1, h2 {
