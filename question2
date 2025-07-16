@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>第2の謎</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script-next.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h2>第2の謎：カタリーナの小路</h2>
+    <p>
+      古の職人ギルドが名を刻んだ石壁を見よ。<br>
+      その数が次の鍵となる…<br><br>
+      正しい数（2ケタ）を入力せよ。
+    </p>
+
+    <input type="text" id="answer" placeholder="例:12">
+    <button id="submitBtn">送信</button>
+    <p id="message"></p>
+  </div>
+</body>
+</html>
