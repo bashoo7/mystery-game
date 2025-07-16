@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>テストページ</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML、CSS、Javascriptのサンプル</title>
+    <link rel="stylesheet" href="test2.css">
+    <script type="text/javascript" src="test3.js"></script>
 </head>
+
 <body>
-  <h1>GitHub Pages テストページ</h1>
-  <p>これは静的HTMLページです。</p>
+    <section class="wrapper">
+        <div class="container">
+            <div class="content">
+                <h2 class="heading">MESSAGE</h2>
+                <p>テキストテキストテキストテキストテキストテキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                <form><input type="button" value="日時表示" onClick="message()"></form>
+                <span id="view_time"></span>
+            </div>
+        </div>
+    </section>
 </body>
-</html>
