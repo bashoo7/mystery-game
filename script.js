@@ -12,3 +12,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+function checkAnswer() {
+  const correct = "318";
+  const input = document.getElementById("answer").value;
+
+  if (input === correct) {
+    document.body.classList.remove("fade-in");
+    document.body.classList.add("fade-out");
+    setTimeout(() => {
+      window.location.href = "question2.html";
+    }, 600); // フェードアウト時間に合わせて調整
+  } else {
+    document.getElementById("message").innerText = "ちがうよ！もう一度考えてみよう。";
+  }
+}
