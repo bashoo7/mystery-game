@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const correct = "のぞけ";
+  const correct = "のぞく";
   const submitBtn = document.getElementById("submitBtn");
   const message = document.getElementById("message");
 
