@@ -11,9 +11,9 @@ html, body {
   font-family: 'Cinzel', serif;
   background: linear-gradient(to bottom, #d3e4f0, #ffffff);
   transition: opacity 1s ease;
+  font-size: 18px; /* 基本サイズを少し大きく */
 }
 
-/* フェードイン */
 .fade-in {
   animation: fadeIn 1s ease-in;
 }
@@ -23,41 +23,36 @@ html, body {
   to { opacity: 1; }
 }
 
-/* レイアウト */
 .container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  width: 90%;
   padding: 1rem;
 }
 
 .card {
   background-color: #fff;
-  padding: 24px;
+  padding: 2rem;
   border-radius: 16px;
   width: 100%;
-  max-width: 480px;
+  max-width: 700px; /* PCでも見やすいように拡大 */
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   text-align: center;
-  margin: 0 auto;
+  margin: auto;
 }
 
-/* 見出し・本文 */
-h1, h2 {
-  font-size: 1.8em;
-  margin-bottom: 16px;
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  margin-bottom: 16px;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
 }
 
-/* 入力欄とボタン */
 input[type="text"] {
   padding: 12px;
   font-size: 1em;
@@ -68,13 +63,13 @@ input[type="text"] {
 }
 
 button {
-  padding: 12px 20px;
-  font-size: 1em;
+  padding: 14px 24px;
+  font-size: 1.2rem;
   background-color: #4e91d1;
   color: white;
   border: none;
   border-radius: 8px;
-  margin-left: 8px;
+  margin-top: 1rem;
   cursor: pointer;
 }
 
@@ -82,64 +77,33 @@ button:hover {
   background-color: #3a78b0;
 }
 
-#message {
-  margin-top: 20px;
-  font-size: 1em;
-  color: #cc0000;
-}
-
-/* ==== スマホ向け最適化 ==== */
+/* スマホ対応 */
 @media screen and (max-width: 600px) {
-  h1, h2 {
-    font-size: 1.5em;
+  h1 {
+    font-size: 1.7rem;
   }
 
   p {
-    font-size: 1.1em;
+    font-size: 1.1rem;
   }
 
   input[type="text"], button {
     width: 100%;
-    margin-top: 8px;
     margin-left: 0;
   }
 
   .card {
-    padding: 20px;
+    padding: 1.5rem;
+    border-radius: 12px;
   }
 }
 
-/* ==== 改行制御用クラス ==== */
+/* 改行用 */
 .br-sm {
   display: none;
 }
-
-.mobile-break {
-  display: none;
-}
-
-.only-sm {
-  display: none;
-}
-.only-pc {
-  display: block;
-}
-
-/* スマホ時に表示切り替え */
 @media screen and (max-width: 600px) {
   .br-sm {
     display: inline;
-  }
-
-  .mobile-break {
-    display: block;
-  }
-
-  .only-sm {
-    display: block;
-  }
-
-  .only-pc {
-    display: none;
   }
 }
